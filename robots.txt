@@ -1,0 +1,18 @@
+# Allow all search engines to crawl all pages except for specific files and directories
+User-agent: *
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /js/
+
+# Allow search engines to access important images
+Allow: /img/avatars/
+Allow: /img/backgrounds/
+Allow: /img/favicon/
+Allow: /img/og-image.jpeg
+
+# Block specific bots (if needed)
+User-agent: BadBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.sachindev.com/sitemap.xml
