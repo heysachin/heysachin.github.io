@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <!-- Square 150x150 logo -->
+            <square150x150logo src="img/favicon/og-image.jpeg"/>
+            <!-- Wide 310x150 logo -->
+            <wide310x150logo src="img/favicon/og-image.jpeg"/>
+            <!-- Square 310x310 logo -->
+            <square310x310logo src="img/favicon/og-image.jpeg"/>
+            <!-- Square 70x70 logo -->
+            <square70x70logo src="img/favicon/og-image.jpeg"/>
+            <!-- Tile color -->
+            <TileColor>#ffffff</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
