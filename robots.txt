@@ -1,8 +1,6 @@
 # Allow all search engines to crawl all pages except for specific files and directories
 User-agent: *
-Disallow: /css/
 Disallow: /fonts/
-Disallow: /js/
 
 # Allow search engines to access important images
 Allow: /img/avatars/
