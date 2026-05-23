@@ -441,11 +441,13 @@ function getCurrentTheme() {
 function loadTheme(theme) {
   const root = document.querySelector(':root');
   if (theme === "light") {
-    themeBtn.innerHTML = `<em></em><i class="ph-bold ph-moon-stars"></i>`;
+    themeBtn.innerHTML = `<em></em><i class="ph-bold ph-moon-stars" aria-hidden="true"></i>`;
   } else {
-    themeBtn.innerHTML = `<em></em><i class="ph-bold ph-sun"></i>`;
+    themeBtn.innerHTML = `<em></em><i class="ph-bold ph-sun" aria-hidden="true"></i>`;
   }
   root.setAttribute('color-scheme', `${theme}`);
+  themeBtn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+  themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 };
 
 themeBtn.addEventListener('click', () => {

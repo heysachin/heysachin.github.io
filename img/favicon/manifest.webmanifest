@@ -1,11 +1,16 @@
 {
-  "name": "Sachin Resume",
-  "short_name": "CV/Resume",
+  "name": "Sachin Dev — Software Engineer",
+  "short_name": "Sachin Dev",
+  "description": "Sachin Dev — Software Engineer at Google. Backend engineer building scalable systems.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "theme_color": "#111111",
+  "background_color": "#ffffff",
   "icons": [
-    { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
-  ],
-  "theme_color": "#efefef",
-  "background_color": "#efefef",
-  "display": "standalone"
+    { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
+    { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" },
+    { "src": "/img/favicon/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ]
 }
