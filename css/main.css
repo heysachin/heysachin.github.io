@@ -4268,3 +4268,187 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Accessibility helpers + custom additions Start */
+/* ------------------------------------------------*/
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent);
+  color: var(--t-bright);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--_radius-md, 0.5rem);
+  -webkit-transition: top 200ms ease-out;
+  transition: top 200ms ease-out;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.headline__role {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+  color: var(--t-medium, inherit);
+}
+@media only screen and (min-width: 768px) {
+  .headline__role { font-size: 1.875rem; }
+}
+@media only screen and (min-width: 1200px) {
+  .headline__role { font-size: 2.25rem; }
+}
+
+/* Projects grid */
+.projects-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .projects-cards { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--base);
+  border: 1px solid var(--stroke-elements);
+  border-radius: var(--_radius-xl);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  -webkit-transition: transform 250ms ease-out, border-color 250ms ease-out, box-shadow 250ms ease-out;
+  transition: transform 250ms ease-out, border-color 250ms ease-out, box-shadow 250ms ease-out;
+}
+.project-card:hover,
+.project-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.18);
+}
+.project-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.project-card__tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--stroke-elements);
+  color: var(--t-medium);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+.project-card__desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--t-medium);
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.project-card__meta li {
+  font-size: 0.8125rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--stroke-elements);
+  border-radius: 999px;
+  color: var(--t-medium);
+}
+
+.project-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--t-bright);
+}
+.project-card__cta i {
+  -webkit-transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+}
+.project-card:hover .project-card__cta i,
+.project-card:focus-visible .project-card__cta i {
+  transform: translateX(4px);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card__cta i,
+  .skip-link {
+    transition: none !important;
+  }
+  .project-card:hover,
+  .project-card:focus-visible {
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------*/
+/* Accessibility helpers + custom additions End */
+/* ------------------------------------------------*/
+
+
+/* Tools group label (used in Skills section) */
+.tools-group {
+  margin-bottom: 2.5rem;
+}
+.tools-group:last-child {
+  margin-bottom: 0;
+}
+.tools-group__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t-medium);
+  margin: 0 0 1rem;
+}
+
